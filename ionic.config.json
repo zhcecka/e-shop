@@ -1,0 +1,8 @@
+{
+  "name": "E-Shop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "d81791ee"
+}
