@@ -1,0 +1,9 @@
+<ion-item *ngIf="good" [routerLink]="'/good/' + good.sku" [detail]="false">
+  <ion-avatar slot="start">
+    <img [src]="good.image">
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ good.name }}</h2>
+    <ion-note>{{ good.description }}</ion-note> 
+  </ion-label>
+</ion-item>

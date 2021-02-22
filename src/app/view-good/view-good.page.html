@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="good">
+  <ion-grid>
+    <ion-row>
+      <img [src]="good.image" alt="">
+    </ion-row>
+    <ion-row>
+      <h1>{{good.name}}</h1>
+    </ion-row>
+    <ion-row>
+      {{good.description}}
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="setAmount(100)">100$</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="setAmount(10)">10$</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="setQuantity(2.2)">2.2qty</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="setQuantity(9)">9qty</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Amount, $</ion-label>
+          <ion-input [(ngModel)]="amount" (ionChange)="inputAmount()" type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Quantity</ion-label>
+          <ion-input [(ngModel)]="quantity" (ionChange)="inputQuantity()" type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
